@@ -1,0 +1,20 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} Temporis Receipts Help</title>
+<link rel="icon" href="../static/Logo/Temporis-icon.jpg "type="images/x-icon">
+{% include 'navbar.html' %}
+
+
+
+
+
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
+<!-- JavaScript Bundle with Popper -->
+

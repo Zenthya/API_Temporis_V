@@ -1,0 +1,20 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} Temporis Receipts Help</title>
+<link rel="icon" href="../static/Logo/Temporis-icon.jpg "type="images/x-icon">
+{% include "navbar.html" %}
+
+
+<div class = "container p-3">
+    {% for count_carte in counts_cartes %}
+<div class = "card m-2">
+    <div class ="card-body"> nombres de carte : {{ count_carte['nb_carte'] }}
+    </div>
+</div>
+    {% endfor %}
+    {% for count_recette in counts_recettes %}
+<div class = "card m-2 ">
+    <div class ="card-body"> nombres de recette : {{ count_recette['nb_recette'] }}
+    </div>
+</div>
+{% endfor %}
+</div>

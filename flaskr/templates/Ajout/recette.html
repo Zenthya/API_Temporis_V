@@ -1,0 +1,55 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} Temporis Recipes Add</title>
+<link rel="icon" href="../static/Logo/Temporis-icon.jpg "type="images/x-icon">
+{% include "navbar.html" %}
+
+<div class ="container p-5">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning p-3" role="alert">{{ message }}</div>
+  {% endfor %}
+<form method="post">
+    <div class="form-floating mb-3">
+        <input name="name_card" type="text" class="form-control" id="floatingName" placeholder="Password">
+        <label for="floatingName">Nom de la recette</label>
+
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="card_1" type="text" class="form-control" id="floatingcard1" placeholder="Password">
+        <label for="floatingcard1">Carte n°1</label>
+
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="card_2" type="text" class="form-control" id="floatingcard2" placeholder="Password">
+        <label for="floatingcard2">Carte n°2</label>
+
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="card_3" type="text" class="form-control" id="floatingcard3" placeholder="Password">
+        <label for="floatingcard3">Carte n°3</label>
+
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="card_4" type="text" class="form-control" id="floatingcard4" placeholder="Password">
+        <label for="floatingcard4">Carte n°4</label>
+
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="card_5" type="text" class="form-control" id="floatingcard5" placeholder="Password">
+        <label for="floatingcard5">Carte n°5</label>
+
+    </div>
+    <div class="form-floating mb-3 ">
+        <input name="Item" type="text" class="form-control" id="floatingItem" placeholder="Password">
+        <label for="floatingItem">Item</label>
+
+    </div>
+    <div class="form-floating mb-3 ">
+        <input name="Price" type="text" class="form-control" id="floatingPrice" placeholder="Password">
+        <label for="floatingPrice">Prix</label>
+
+    </div>
+    <div class="form-floating  ">
+    <button type="submit" class = "btn btn-outline-secondary" >Ajouter</button>
+    </div>
+</form>
+</div>

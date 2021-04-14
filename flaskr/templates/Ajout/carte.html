@@ -1,0 +1,30 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} Temporis Card Add</title>
+<link rel="icon" href="../static/Logo/Temporis-icon.jpg "type="images/x-icon">
+{% include "navbar.html" %}
+
+<div class ="container p-5">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning p-3" role="alert">{{ message }}</div>
+  {% endfor %}
+<form method="post">
+    <div class="form-floating mb-3">
+        <input name="name_card" type="text" class="form-control" id="floatingName" placeholder="Password">
+        <label for="floatingName">Nom de la carte</label>
+
+    </div>
+    <div class="form-floating mb-3">
+        <input  name="lvl_card" type="int" class="form-control" id="floatingLvl" placeholder="Password">
+        <label for="floatingLvl">Niveau de la carte</label>
+
+    </div>
+    <div class="form-floating mb-3 ">
+        <input name="mob_card" type="text" class="form-control" id="floatingMob" placeholder="Password">
+        <label for="floatingMob">Nom du mob qui drop la carte</label>
+
+    </div>
+    <div class="form-floating  ">
+    <button type="submit" class = "btn btn-outline-secondary" >Ajouter</button>
+    </div>
+</form>
+</div>

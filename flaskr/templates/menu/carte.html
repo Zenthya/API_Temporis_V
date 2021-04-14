@@ -1,0 +1,26 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} Temporis Cards Help</title>
+<link rel="icon" href="../static/Logo/Temporis-icon.jpg "type="images/x-icon">
+{% include "navbar.html" %}
+<div class="containers p-3 ">
+<div class=" row row-cols-5">
+{%for card in Cards %}
+<div class ="col p-3 ">
+<div class="card  " style="width: 15rem;">
+    <img src="../static/carte/{{ card['id'] }}.svg" class="card-img-top w-75" >
+  <div class="card-body">
+    <h5 class="card-title">{{ card['name'] }}</h5>
+    <p class="card-text"> Niveau de la carte : {{ card['level'] }}
+        <br>Profession : {{ card['profession'] }}
+        <br> Type : {{ card['type']  }}
+        <br> Rareté : {{ card['color'] }}
+
+
+    </p>
+
+  </div>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
